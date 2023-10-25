@@ -1,0 +1,14 @@
+
+
+:root{
+    --layout-bg : #170f23;
+    --sidebar-bg: hsla(0,0%,100%,0.05);
+    --nav-text: #dadada;
+    --nav-text-hover: #fff;
+    --alpha-bg: hsla(0,0%,100%,0.1);
+    --purple-primary: #9b4de0;
+}
+
+.w100 {
+    width: 100%;
+}
