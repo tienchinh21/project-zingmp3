@@ -1,0 +1,19 @@
+.list-music-wrapper .song-prefix .number {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.song-prefix .sort {
+    width: 18px;
+    height: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+}
+
+.song-prefix .grey {
+    color: var(--text-secondary);
+}

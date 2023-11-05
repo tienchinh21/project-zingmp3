@@ -1,0 +1,112 @@
+.list-music-wrapper .list-item .media .media-left,
+.list-music-wrapper .list-item .media .media-right {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.list-item .media-center {
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: left;
+    align-self: center;
+    width: 0;
+}
+
+.list-item .media .media-right {
+    margin-left: 10px;
+}
+
+.list-item .media-left .prefix-chart-promote {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+}
+
+.list-item .media-left .prefix-chart-promote span {
+    text-align: center;
+    width: 83px;
+    color: var(--text-secondary);
+}
+
+.list-music-wrapper .list-item .media-left .song-thumb img {
+    width: 40px;
+    height: 40px;
+}
+
+.list-item .media-left .card-info .title {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.list-item .media-center .album-info {
+    color: var(--song-item-action);
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.list-item .media-center .album-info:hover {
+    text-decoration: underline;
+    color: var(--link-text-hover);
+}
+
+.list-item .media-right .level {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.level-item {
+    align-items: center;
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+.list-item .hover-item-music {
+    display: none;
+}
+
+.list-item .actions-item-music {
+    display: block;
+}
+
+.list-item .media-right .btn-item {
+    padding: 6px;
+    margin: 0 4px;
+    font-size: 14px;
+    border-radius: 999px;
+}
+
+.list-item .media-right .btn-item:hover {
+    background-color: var(--alpha-bg);
+}
+
+.list-item .media-right .btn-item .icon {
+    padding: 5px;
+    border-radius: 50%;
+    color: var(--text-primary);
+    font-size: 16px;
+}
+
+.list-item .media-right .duration {
+    font-size: 12px;
+    width: 46px;
+    color: var(--song-item-action);
+}
+
+.list-item:hover .hover-item-music {
+    display: block;
+}
+
+.list-item:hover .actions-item-music {
+    display: none;
+}

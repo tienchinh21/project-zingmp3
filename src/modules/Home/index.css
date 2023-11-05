@@ -1,0 +1,225 @@
+/* CSS ListItem */
+.playlist-section .title {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-primary);
+    font-size: 20px;
+}
+
+.carousel-wrapper {
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    margin: 0 -15px;
+    overflow: hidden;
+}
+
+.carousel__container {
+    display: flex;
+    z-index: 3;
+    width: 100%;
+}
+
+.playlist-section .carousel-wrapper .item,
+.playlist-section .carousel-wrapper .item-recommend,
+.playlist-section .carousel-wrapper .item-love {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item .card-content .title-recommend,
+.item .card-content .subtitle,
+.item .card-content .title-love {
+    display: none;
+}
+
+.item-recommend .card-content .title-content,
+.item-recommend .card-content .title-love {
+    display: none;
+}
+
+.item-love .card-content .title-content,
+.item-love .card-content .title-recommend,
+.item-love .card-content .subtitle {
+    display: none;
+}
+
+.playlist-section .carousel-wrapper .item {
+    width: 14.28571%;
+}
+
+.playlist-section .carousel-wrapper .item .card {
+    width: 100%;
+    position: relative;
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.card-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    transition: transform .7s;
+}
+
+.card-image:hover img {
+    transform: scale(1.1) translateZ(0);
+}
+
+.card-content {
+    margin-top: 12px;
+}
+
+.card-content .title-content {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.36;
+    color: var(--text-primary);
+    overflow: hidden;
+}
+
+.actions-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.actions {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    align-items: center;
+    z-index: 97;
+    transform: translateX(-50%) translateY(-50%);
+    display: -moz-flex;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    visibility: hidden;
+}
+
+.playlist-actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.play-icon {
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.playlist-actions .btn {
+    font-size: 20px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+}
+
+.playlist-actions .btn:hover {
+    background-color: var(--hover-opacity);
+}
+
+.playlist-actions .btn .icon {
+    font-size: 16px;
+    padding: 7px 3px;
+    color: #fff;
+}
+
+.opacity {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-alpha-50);
+    visibility: hidden;
+}
+
+.link-item:hover .opacity {
+    visibility: visible;
+}
+
+.link-item:hover .actions {
+    visibility: visible;
+}
+
+/* CSS ListItem */
+
+
+/* CSS ListRecent */
+.card-content .title-content span {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.36;
+    color: var(--text-primary);
+    overflow: hidden;
+}
+
+.card-content .title-content span:hover {
+    color: var(--link-text-hover);
+}
+
+/* CSS ListRecent */
+
+
+/* CSS LIST RECOMMEND */
+.card-content .title-recommend a {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.36;
+    color: var(--text-primary);
+    overflow: hidden;
+}
+
+.card-content .title-recommend a:hover {
+    color: var(--link-text-hover);
+}
+
+.card-content .subtitle a {
+    font-size: 14px;
+    color: var(--text-secondary);
+
+}
+
+.card-content .subtitle a:hover {
+    color: var(--link-text-hover);
+    text-decoration: underline;
+}
+
+/* CSS LIST RECOMMEND */
+
+
+
+/* CSS LIST LOVE */
+.title-love {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* CSS LIST LOVE */

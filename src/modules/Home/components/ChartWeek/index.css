@@ -1,0 +1,32 @@
+.chart-week {
+    margin-top: 28px;
+    margin-bottom: 30px;
+}
+
+.chart-week .columns-chart {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0 -15px;
+}
+
+.chart-week .columns-chart .column {
+    position: relative;
+    min-height: 1px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.chart-week .columns-chart .column .banner img {
+    transition: transform .7s;
+}
+
+.chart-week .columns-chart .column .banner:hover img {
+    transform: scale(1.1) translateZ(0);
+}
+
+.chart-week .columns-chart .column .banner {
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}

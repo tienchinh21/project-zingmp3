@@ -1,14 +1,46 @@
-
-
-:root{
-    --layout-bg : #170f23;
-    --sidebar-bg: hsla(0,0%,100%,0.05);
+:root {
+    --layout-bg: #170f23;
+    --sidebar-bg: hsla(0, 0%, 100%, 0.05);
     --nav-text: #dadada;
     --nav-text-hover: #fff;
-    --alpha-bg: hsla(0,0%,100%,0.1);
+    --alpha-bg: hsla(0, 0%, 100%, 0.1);
     --purple-primary: #9b4de0;
+    --border-primary: hsla(0, 0%, 100%, 0.1);
+    --padding-section: 59px;
+    --dark-alpha-50: rgba(0, 0, 0, 0.5);
+    --hover-opacity: hsla(0, 0%, 100%, 0.3);
+    --search-text: #eee;
+    --link-text-hover: #c273ed;
+    --setting-icon-text: #d8d8d8;
+    --text-primary: #fff;
+    --text-secondary: hsla(0, 0%, 100%, 0.5);
+    --text-placeholder: #dadada;
+    --song-item-action: hsla(0, 0%, 100%, 0.5);
+    --white: #fff;
+    --border-secondary: hsla(0, 0%, 100%, 0.05);
+
+}
+
+.d-block {
+    display: block;
 }
 
 .w100 {
     width: 100%;
+}
+
+.mgr12 {
+    margin-right: 12px;
+}
+
+.mgt16 {
+    margin-top: 16px;
+}
+
+.channel-section {
+    margin-top: 48px;
+}
+
+.bor-b-1 {
+    border-bottom: 1px solid var(--border-secondary);
 }

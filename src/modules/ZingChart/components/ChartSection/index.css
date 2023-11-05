@@ -1,0 +1,32 @@
+.chart-section .section-header {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.chart-section .section-header .chart-title {
+    display: flex;
+    align-items: center;
+}
+
+.chart-section .section-header .chart-title .title-color {
+    background: radial-gradient(50% 124.93% at 95.86% -10%, #3efad9 0, hsla(0, 0%, 100%, 0) 100%), linear-gradient(91.56deg, #ff9357 1.54%, #9100ff 98.71%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 40px;
+    display: block;
+}
+
+.chart-section .section-header .chart-title .btn-chart {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    margin-left: 12px;
+}
+
+.chart-section .section-header .chart-title .btn-chart svg {
+    width: 40px;
+    height: 40px;
+}

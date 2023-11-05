@@ -1,13 +1,13 @@
-import { Header, Nav, ListMusic } from "./components";
+import {Header, SideBar} from './components';
 
 
 const MainLayout = ({children}) => {
     return (
         <>
-            <Nav/>
+            <SideBar/>
             <Header/>
             {children}
-            <ListMusic/>
+
         </>
     );
 };

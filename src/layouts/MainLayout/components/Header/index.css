@@ -1,0 +1,145 @@
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 240px;
+    top: 0;
+    right: 0;
+    height: 70px;
+    padding: 0 var(--padding-section);
+    right: 330px;
+    z-index: 9999;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* CSS FormInput */
+.header-right {
+    display: flex;
+    margin-right: 10px;
+}
+
+.header-right button {
+    display: flex;
+    align-items: center;
+}
+
+.header-right button .icon {
+    font-size: 17px;
+    margin-right: 20px;
+}
+
+form {
+    position: relative;
+    width: 440px;
+}
+
+.form--wrapper {
+    position: relative;
+    border-radius: 20px;
+    height: 40px;
+    background-color: var(--alpha-bg);
+}
+
+.form--wrapper .icon-search {
+    position: absolute;
+    cursor: pointer;
+    font-size: 16px;
+    top: 10px;
+    left: 10px;
+    color: var(--text-placeholder);
+}
+
+.form--wrapper .input-wrapper {
+    position: absolute;
+    top: 0;
+    left: 38px;
+    right: 10px;
+    bottom: 0;
+}
+
+.form--wrapper .input-wrapper input {
+    margin: 0;
+    display: inline-block;
+    width: 95%;
+    font-size: 14px;
+    color: var(--search-text);
+    background-clip: padding-box;
+    border: 0;
+    position: relative;
+    top: -2px;
+    height: 34px;
+    padding: 5px 0;
+    line-height: 34px;
+}
+
+.form--wrapper .input-wrapper input::placeholder {
+    color: var(--search-text);
+}
+
+/* CSS FormInput */
+
+
+/* CSS SectionUSer */
+.header-left {
+    display: flex;
+}
+
+.header-left .download-desktop-app {
+    margin-right: 12px;
+    background-color: var(--alpha-bg);
+    color: var(--link-text-hover);
+    border-radius: 999px;
+    position: relative;
+}
+
+.header-left .download-desktop-app a {
+    display: flex;
+    padding: 10px 24px;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--link-text-hover);
+}
+
+.header-left .setting-item {
+    position: relative;
+    margin-right: 10px;
+}
+
+.header-left .setting-item button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--alpha-bg);
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.header-left .setting-item .icon-setting {
+    color: var(--setting-icon-text);
+    font-size: 14px;
+}
+
+.header-left .user-setting {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.header-left .user-setting .avt {
+    border-radius: 999px;
+}
+
+.header-left .user-setting .avt img {
+    border-radius: 999px;
+}
+
+/* CSS SectionUSer */

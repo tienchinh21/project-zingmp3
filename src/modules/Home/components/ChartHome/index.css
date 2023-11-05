@@ -1,0 +1,127 @@
+.chart-home {
+    position: relative;
+    border-radius: 8px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+
+.chart-home .bg-blur {
+    background-color: #2b273f;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.chart-home .bg-alpha {
+    background-color: rgba(51, 16, 76, .95);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.chart-home .header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.chart-home .header>a {
+    background: radial-gradient(50% 124.93% at 95.86% -10%, #3efad9 0, hsla(0, 0%, 100%, 0) 100%), linear-gradient(91.56deg, #ff9357 1.54%, #9100ff 98.71%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 27px;
+    display: block;
+}
+
+.chart-home .header .btn-chart {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.chart-home .header .btn-chart:hover {
+    filter: brightness(.9);
+}
+
+.chart-song {
+    border-radius: 4px !important;
+    margin-bottom: 10px;
+    background-color: hsla(0, 0%, 100%, .07);
+}
+
+.chart-song .item {
+    position: relative;
+}
+
+.song-prefix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-right: 10px;
+    color: var(--song-item-action);
+    font-weight: 700;
+}
+
+.song-prefix .number {
+    width: 22px;
+    color: rgba(74, 144, 226, 0);
+    font-size: 32px;
+}
+
+.song-prefix .number.is-top-1 {
+    -webkit-text-stroke: 1px #4a90e2;
+    opacity: 1;
+}
+
+.song-prefix .number.is-top-2 {
+    -webkit-text-stroke: 1px #50e3c2;
+}
+
+.song-prefix .number.is-top-3 {
+    -webkit-text-stroke: 1px #e35050;
+}
+
+.chart-song .subtitle {
+    display: flex;
+    align-items: center;
+}
+
+.chart-song .media-right {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.56;
+}
+
+.chart-song .media-right .hover-item {
+    color: #fff;
+}
+
+.btn-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-center .show-more {
+    margin-top: 5px;
+    border-radius: 999px;
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 5px 25px;
+}
+
+.btn-center .show-more:hover {
+    background-color: hsla(0, 0%, 100%, .1);
+}
