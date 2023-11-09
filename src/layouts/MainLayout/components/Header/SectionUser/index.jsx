@@ -1,6 +1,5 @@
 import { Download } from "~/shared/Svgs";
 
-
 const SectionUser = () => {
     return (
         <div className="header-left">

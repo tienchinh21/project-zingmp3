@@ -1,6 +1,14 @@
+import React, { useState } from 'react';
+
 import './index.css';
 
 const NewRelease = () => {
+    const [activeButton, setActiveButton] = useState('all');
+
+    const handleButtonClick = (button) => {
+        setActiveButton(button);
+    };
+
     return (
         <div className="new-release channel-section">
             <h3 className="title-new-release">
@@ -11,9 +19,24 @@ const NewRelease = () => {
                 </a>
             </h3>
             <div className="genre-select">
-                <button className="btn-release active">Tất cả</button>
-                <button className="btn-release">Việt Nam</button>
-                <button className="btn-release">Quốc tế</button>
+                <button
+                    className={`btn-release ${activeButton === 'all' ? 'active' : ''}`}
+                    onClick={() => handleButtonClick('all')}
+                >
+                    Tất cả
+                </button>
+                <button
+                    className={`btn-release ${activeButton === 'vietnam' ? 'active' : ''}`}
+                    onClick={() => handleButtonClick('vietnam')}
+                >
+                    Việt Nam
+                </button>
+                <button
+                    className={`btn-release ${activeButton === 'international' ? 'active' : ''}`}
+                    onClick={() => handleButtonClick('international')}
+                >
+                    Quốc tế
+                </button>
             </div>
             <div className="columns">
                 <div className="column">

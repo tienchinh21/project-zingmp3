@@ -6,7 +6,7 @@ import './index.css';
 const Header = () => {
 
     return (
-        <header>
+        <header className="header-zmp3">
             <div className="header-wrapper">
                 <FormInput />
                 <SectionUser />

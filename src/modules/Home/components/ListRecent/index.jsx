@@ -1,6 +1,5 @@
-import ListItem from '~/modules/Home/components/ListItem';
 
-
+import PlayListSection from '~/shared/components/PlayListSection';
 
 import img1 from '../../../../assets/images/home/listRecent/img1.jpg';
 import img2 from '../../../../assets/images/home/listRecent/img2.jpg';
@@ -10,36 +9,19 @@ import img5 from '../../../../assets/images/home/listRecent/img5.jpg';
 import img6 from '../../../../assets/images/home/listRecent/img6.png';
 import img7 from '../../../../assets/images/home/listRecent/img7.jpg';
 
-
-
 const data = [
-    { title: 'Top 100 Bài Hát Hát Nhạc Trẻ Hay Nhất', img: img1 },
-    { title: 'Acoustic Thư Giãn', img: img2 },
-    { title: '#zingchart', img: img3 },
-    { title: '#zingchart Tuần 18, 2020', img: img4 },
-    { title: 'Today V - Pop Hits', img: img5 },
-    { title: 'Mình yêu nhau từ kiếp', img: img6 },
-    { title: 'Những Bài Hát Hay', img: img7 },
-]
-
-
+    { title: 'Top 100 Bài Hát Hát Nhạc Trẻ Hay Nhất', image: img1, single: '' },
+    { title: 'Acoustic Thư Giãn', image: img2, single: '' },
+    { title: '#zingchart', image: img3, single: '' },
+    { title: '#zingchart Tuần 18, 2020', image: img4, single: '' },
+    { title: 'Today V - Pop Hits', image: img5, single: '' },
+    { title: 'Mình yêu nhau từ kiếp', image: img6, single: '' },
+    { title: 'Những Bài Hát Hay', image: img7, single: '' },
+];
 
 const ListRecent = () => {
     return (
-        <div className="playlist-section">
-            <div className="container">
-                <h3 className='title'>Gần Đây</h3>
-                <div className="carousel-wrapper">
-                    <div className="carousel">
-                        <div className="carousel__container">
-                            {data.map((item, index) => (
-                                <ListItem key={index} item={item} />
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <PlayListSection titleWrapper="Gần Đây" data={data} single={data.single} />
     );
 };
 

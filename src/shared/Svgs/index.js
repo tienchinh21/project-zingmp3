@@ -1,0 +1,16 @@
+export { default as Discover } from './Discover';
+export { default as Radio } from './Radio';
+export { default as ZingChart } from './ZingChart';
+export { default as Library } from './Library';
+export { default as Recent } from './Recent';
+export { default as Charts } from './Charts';
+export { default as Topic } from './Topic';
+export { default as Top } from './Top100';
+export { default as Favourite } from './Favourite';
+export { default as Playlist } from './Playlist';
+export { default as Album } from './Album';
+export { default as Upload } from './Upload';
+export { default as AddList } from './AddPlayList';
+export { default as Download } from './Download';
+export { default as IconPlay } from './IconPlay';
+export { default as LiveTag } from './LiveTag';

@@ -1,4 +1,4 @@
-header {
+.header-zmp3 {
     display: flex;
     align-items: center;
     position: fixed;
@@ -7,8 +7,8 @@ header {
     right: 0;
     height: 70px;
     padding: 0 var(--padding-section);
-    right: 330px;
-    z-index: 9999;
+    /* right: 330px; */
+    z-index: 99;
 }
 
 .header-wrapper {
@@ -16,6 +16,22 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    z-index: 99;
+}
+
+.header-zmp3::before {
+    content: "";
+    position: absolute;
+    height: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: var(--layout-header-bg);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    width: calc(100% + 2px);
+    box-shadow: 0 3px 5px var(--sticky-header-box-shadow);
 }
 
 /* CSS FormInput */

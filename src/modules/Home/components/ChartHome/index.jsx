@@ -2,8 +2,6 @@ import { IconPlay } from '~/shared/Svgs';
 
 import './index.css';
 
-
-
 const ChartHome = () => {
     return (
         <div className="chart-home channel-section">

@@ -1,5 +1,4 @@
-import { Thuvien, Radio, Khampha, Zingchart, Ganday, Bxh, Chude, Top, Album, YeuThich, Tailen, Playlist, LiveTag } from '../../../../../shared/Svgs/index';
-
+import { Library, Radio, Discover, ZingChart, Recent, Charts, Topic, Top, Album, Favourite, Upload, Playlist, LiveTag } from '../../../../../shared/Svgs/index';
 
 const MenuItem = () => {
 
@@ -9,13 +8,13 @@ const MenuItem = () => {
                 <ul className="list-item">
                     <li className="item isActive">
                         <a href="">
-                            <Khampha />
+                            <Discover />
                             <span>Khám Phá</span>
                         </a>
                     </li>
                     <li className="item">
                         <a href="">
-                            <Zingchart />
+                            <ZingChart />
                             <span>#zingchart</span>
                         </a>
                     </li>
@@ -28,7 +27,7 @@ const MenuItem = () => {
                     </li>
                     <li className="item">
                         <a href="">
-                            <Thuvien />
+                            <Library />
                             <span>Thư viện</span>
                         </a>
                     </li>
@@ -41,13 +40,13 @@ const MenuItem = () => {
                         <ul className='list-item'>
                             <li className="item">
                                 <a href="">
-                                    <Bxh />
-                                    <span>BXH Nhạc Mới</span>
+                                    <Charts />
+                                    <span>Charts Nhạc Mới</span>
                                 </a>
                             </li>
                             <li className="item">
                                 <a href="">
-                                    <Chude />
+                                    <Topic />
                                     <span>Chủ Đề & Thể Loại</span>
                                 </a>
                             </li>
@@ -67,13 +66,13 @@ const MenuItem = () => {
                         <ul className='list-item'>
                             <li className="item">
                                 <a href="">
-                                    <Ganday />
+                                    <Recent />
                                     <span>Nghe gần đây</span>
                                 </a>
                             </li>
                             <li className="item">
                                 <a href="">
-                                    <YeuThich />
+                                    <Favourite />
                                     <span>Bài hát yêu thích</span>
                                 </a>
                             </li>
@@ -91,7 +90,7 @@ const MenuItem = () => {
                             </li>
                             <li className="item">
                                 <a href="">
-                                    <Tailen />
+                                    <Upload />
                                     <span>Đã tải lên</span>
                                 </a>
                             </li>

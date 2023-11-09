@@ -1,6 +1,8 @@
 :root {
     --layout-bg: #170f23;
     --sidebar-bg: hsla(0, 0%, 100%, 0.05);
+    --layout-header-bg: rgba(23, 15, 35, 0.8);
+    --sticky-header-box-shadow: rgba(0, 0, 0, 0.1);
     --nav-text: #dadada;
     --nav-text-hover: #fff;
     --alpha-bg: hsla(0, 0%, 100%, 0.1);

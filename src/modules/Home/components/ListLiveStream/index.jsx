@@ -1,8 +1,6 @@
-
 import { LiveTag } from '~/shared/Svgs';
 
 import './index.css';
-
 
 const ListLiveStream = () => {
     return (
