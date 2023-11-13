@@ -1,9 +1,12 @@
+import React, { useState } from 'react';
 import SongItem from "~/shared/components/PlayListSection/SongItem";
 
 const PlayListSection = (props) => {
+
     return (
         <div className="playlist-section channel-section">
             <div className="container">
+                {props.children}
                 <h3 className='title'>{props.titleWrapper}</h3>
                 <div className="carousel-wrapper">
                     <div className="carousel">
@@ -18,6 +21,5 @@ const PlayListSection = (props) => {
         </div>
     )
 };
-
 
 export default PlayListSection;

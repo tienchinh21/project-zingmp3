@@ -36,15 +36,15 @@
     color: var(--text-secondary);
 }
 
-.media-content .title {
+.media-content .title-fan {
     margin: 5px 0 0;
     font-size: 18px;
 }
 
-.media-content .title a {
+.media-content .title-fan a {
     color: #fff;
 }
 
-.media-content .title a:hover {
+.media-content .title-fan a:hover {
     color: var(--link-text-hover);
 }
