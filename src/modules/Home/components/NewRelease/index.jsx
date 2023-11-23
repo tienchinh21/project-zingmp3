@@ -1,6 +1,34 @@
 import React, { useState } from 'react';
+import MediaItem from '~/shared/components/MediaItem';
 
 import './index.css';
+
+const datNewRelease = [
+    {
+        imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/1/4/b/314b95c08827ed1a05306cebee5cb945.jpg",
+        title: "Dancing Queen",
+        artists: ["Phí Phương Anh", "RIN9"],
+        releaseTime: "Hôm qua"
+    },
+    {
+        imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/c/3/0/3c30a4019913d4b2bd5498eaad359348.jpg",
+        title: "Mần Rể Miền Tây",
+        artists: ["Gin Tuấn Kiệt", "Puka"],
+        releaseTime: "Hôm qua"
+    },
+    {
+        imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/c/3/0/3c30a4019913d4b2bd5498eaad359348.jpg",
+        title: "Mần Rể Miền Tây",
+        artists: ["Gin Tuấn Kiệt", "Puka"],
+        releaseTime: "Hôm qua"
+    },
+    {
+        imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/c/3/0/3c30a4019913d4b2bd5498eaad359348.jpg",
+        title: "Mần Rể Miền Tây",
+        artists: ["Gin Tuấn Kiệt", "Puka"],
+        releaseTime: "Hôm qua"
+    },
+]
 
 const NewRelease = () => {
     const [activeButton, setActiveButton] = useState('all');
@@ -40,292 +68,40 @@ const NewRelease = () => {
             </div>
             <div className="columns">
                 <div className="column">
-                    <div className="list">
-                        <div className="list-item">
-                            <div className="media">
-                                <div className="media-left">
-                                    <div className="song-thumb">
-                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/c/0/6/cc0623a1faa0483e64ddd6f41fe75feb.jpg" alt="" />
-                                        <div className="opacity"></div>
-                                        <div className="actions-container">
-                                            <button class="play-icon"><i class="i-play fa-solid fa-play"></i></button>
-                                        </div>
-                                    </div>
-                                    <div className="card-info">
-                                        <div className="title-wrapper">
-                                            <span>Say Trong Nụ Cười</span>
-                                        </div>
-                                        <div className="subtitle">
-                                            <a href="">Tăng Duy Tân</a>
-                                        </div>
-                                        <div className="time-release">Hôm qua</div>
-                                    </div>
-                                </div>
-                                <div className="media-right"></div>
-                            </div>
+                    {datNewRelease.map((item, index) => (
+                        <div className="list-item" key={index}>
+                            <MediaItem
+                                imageUrl={item.imageUrl}
+                                title={item.title}
+                                artists={item.artists}
+                                releaseTime={item.releaseTime}
+                            />
                         </div>
-                        <div className="list-item">
-                            <div className="media">
-                                <div className="media-left">
-                                    <div className="song-thumb">
-                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/c/0/6/cc0623a1faa0483e64ddd6f41fe75feb.jpg" alt="" />
-                                        <div className="opacity"></div>
-                                        <div className="actions-container">
-                                            <button class="play-icon"><i class="i-play fa-solid fa-play"></i></button>
-                                        </div>
-                                    </div>
-                                    <div className="card-info">
-                                        <div className="title-wrapper">
-                                            <span>Say Trong Nụ Cười</span>
-                                        </div>
-                                        <div className="subtitle">
-                                            <a href="">Tăng Duy Tân</a>
-                                        </div>
-                                        <div className="time-release">Hôm qua</div>
-                                    </div>
-                                </div>
-                                <div className="media-right"></div>
-                            </div>
-                        </div>
-                        <div className="list-item">
-                            <div className="media">
-                                <div className="media-left">
-                                    <div className="song-thumb">
-                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/c/0/6/cc0623a1faa0483e64ddd6f41fe75feb.jpg" alt="" />
-                                        <div className="opacity"></div>
-                                        <div className="actions-container">
-                                            <button class="play-icon"><i class="i-play fa-solid fa-play"></i></button>
-                                        </div>
-                                    </div>
-                                    <div className="card-info">
-                                        <div className="title-wrapper">
-                                            <span>Say Trong Nụ Cười</span>
-                                        </div>
-                                        <div className="subtitle">
-                                            <a href="">Tăng Duy Tân</a>
-                                        </div>
-                                        <div className="time-release">Hôm qua</div>
-                                    </div>
-                                </div>
-                                <div className="media-right"></div>
-                            </div>
-                        </div>
-                        <div className="list-item">
-                            <div className="media">
-                                <div className="media-left">
-                                    <div className="song-thumb">
-                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/c/0/6/cc0623a1faa0483e64ddd6f41fe75feb.jpg" alt="" />
-                                        <div className="opacity"></div>
-                                        <div className="actions-container">
-                                            <button class="play-icon"><i class="i-play fa-solid fa-play"></i></button>
-                                        </div>
-                                    </div>
-                                    <div className="card-info">
-                                        <div className="title-wrapper">
-                                            <span>Say Trong Nụ Cười</span>
-                                        </div>
-                                        <div className="subtitle">
-                                            <a href="">Tăng Duy Tân</a>
-                                        </div>
-                                        <div className="time-release">Hôm qua</div>
-                                    </div>
-                                </div>
-                                <div className="media-right"></div>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
                 <div className="column">
-                    <div className="list">
-                        <div className="list-item">
-                            <div className="media">
-                                <div className="media-left">
-                                    <div className="song-thumb">
-                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/c/0/6/cc0623a1faa0483e64ddd6f41fe75feb.jpg" alt="" />
-                                        <div className="opacity"></div>
-                                        <div className="actions-container">
-                                            <button class="play-icon"><i class="i-play fa-solid fa-play"></i></button>
-                                        </div>
-                                    </div>
-                                    <div className="card-info">
-                                        <div className="title-wrapper">
-                                            <span>Say Trong Nụ Cười</span>
-                                        </div>
-                                        <div className="subtitle">
-                                            <a href="">Tăng Duy Tân</a>
-                                        </div>
-                                        <div className="time-release">Hôm qua</div>
-                                    </div>
-                                </div>
-                                <div className="media-right"></div>
-                            </div>
+                    {datNewRelease.map((item, index) => (
+                        <div className="list-item" key={index}>
+                            <MediaItem
+                                imageUrl={item.imageUrl}
+                                title={item.title}
+                                artists={item.artists}
+                                releaseTime={item.releaseTime}
+                            />
                         </div>
-                        <div className="list-item">
-                            <div className="media">
-                                <div className="media-left">
-                                    <div className="song-thumb">
-                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/c/0/6/cc0623a1faa0483e64ddd6f41fe75feb.jpg" alt="" />
-                                        <div className="opacity"></div>
-                                        <div className="actions-container">
-                                            <button class="play-icon"><i class="i-play fa-solid fa-play"></i></button>
-                                        </div>
-                                    </div>
-                                    <div className="card-info">
-                                        <div className="title-wrapper">
-                                            <span>Say Trong Nụ Cười</span>
-                                        </div>
-                                        <div className="subtitle">
-                                            <a href="">Tăng Duy Tân</a>
-                                        </div>
-                                        <div className="time-release">Hôm qua</div>
-                                    </div>
-                                </div>
-                                <div className="media-right"></div>
-                            </div>
-                        </div>
-                        <div className="list-item">
-                            <div className="media">
-                                <div className="media-left">
-                                    <div className="song-thumb">
-                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/c/0/6/cc0623a1faa0483e64ddd6f41fe75feb.jpg" alt="" />
-                                        <div className="opacity"></div>
-                                        <div className="actions-container">
-                                            <button class="play-icon"><i class="i-play fa-solid fa-play"></i></button>
-                                        </div>
-                                    </div>
-                                    <div className="card-info">
-                                        <div className="title-wrapper">
-                                            <span>Say Trong Nụ Cười</span>
-                                        </div>
-                                        <div className="subtitle">
-                                            <a href="">Tăng Duy Tân</a>
-                                        </div>
-                                        <div className="time-release">Hôm qua</div>
-                                    </div>
-                                </div>
-                                <div className="media-right"></div>
-                            </div>
-                        </div>
-                        <div className="list-item">
-                            <div className="media">
-                                <div className="media-left">
-                                    <div className="song-thumb">
-                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/c/0/6/cc0623a1faa0483e64ddd6f41fe75feb.jpg" alt="" />
-                                        <div className="opacity"></div>
-                                        <div className="actions-container">
-                                            <button class="play-icon"><i class="i-play fa-solid fa-play"></i></button>
-                                        </div>
-                                    </div>
-                                    <div className="card-info">
-                                        <div className="title-wrapper">
-                                            <span>Say Trong Nụ Cười</span>
-                                        </div>
-                                        <div className="subtitle">
-                                            <a href="">Tăng Duy Tân</a>
-                                        </div>
-                                        <div className="time-release">Hôm qua</div>
-                                    </div>
-                                </div>
-                                <div className="media-right"></div>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
                 <div className="column">
-                    <div className="list">
-                        <div className="list-item">
-                            <div className="media">
-                                <div className="media-left">
-                                    <div className="song-thumb">
-                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/c/0/6/cc0623a1faa0483e64ddd6f41fe75feb.jpg" alt="" />
-                                        <div className="opacity"></div>
-                                        <div className="actions-container">
-                                            <button class="play-icon"><i class="i-play fa-solid fa-play"></i></button>
-                                        </div>
-                                    </div>
-                                    <div className="card-info">
-                                        <div className="title-wrapper">
-                                            <span>Say Trong Nụ Cười</span>
-                                        </div>
-                                        <div className="subtitle">
-                                            <a href="">Tăng Duy Tân</a>
-                                        </div>
-                                        <div className="time-release">Hôm qua</div>
-                                    </div>
-                                </div>
-                                <div className="media-right"></div>
-                            </div>
+                    {datNewRelease.map((item, index) => (
+                        <div className="list-item" key={index}>
+                            <MediaItem
+                                imageUrl={item.imageUrl}
+                                title={item.title}
+                                artists={item.artists}
+                                releaseTime={item.releaseTime}
+                            />
                         </div>
-                        <div className="list-item">
-                            <div className="media">
-                                <div className="media-left">
-                                    <div className="song-thumb">
-                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/c/0/6/cc0623a1faa0483e64ddd6f41fe75feb.jpg" alt="" />
-                                        <div className="opacity"></div>
-                                        <div className="actions-container">
-                                            <button class="play-icon"><i class="i-play fa-solid fa-play"></i></button>
-                                        </div>
-                                    </div>
-                                    <div className="card-info">
-                                        <div className="title-wrapper">
-                                            <span>Say Trong Nụ Cười</span>
-                                        </div>
-                                        <div className="subtitle">
-                                            <a href="">Tăng Duy Tân</a>
-                                        </div>
-                                        <div className="time-release">Hôm qua</div>
-                                    </div>
-                                </div>
-                                <div className="media-right"></div>
-                            </div>
-                        </div>
-                        <div className="list-item">
-                            <div className="media">
-                                <div className="media-left">
-                                    <div className="song-thumb">
-                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/c/0/6/cc0623a1faa0483e64ddd6f41fe75feb.jpg" alt="" />
-                                        <div className="opacity"></div>
-                                        <div className="actions-container">
-                                            <button class="play-icon"><i class="i-play fa-solid fa-play"></i></button>
-                                        </div>
-                                    </div>
-                                    <div className="card-info">
-                                        <div className="title-wrapper">
-                                            <span>Say Trong Nụ Cười</span>
-                                        </div>
-                                        <div className="subtitle">
-                                            <a href="">Tăng Duy Tân</a>
-                                        </div>
-                                        <div className="time-release">Hôm qua</div>
-                                    </div>
-                                </div>
-                                <div className="media-right"></div>
-                            </div>
-                        </div>
-                        <div className="list-item">
-                            <div className="media">
-                                <div className="media-left">
-                                    <div className="song-thumb">
-                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/c/0/6/cc0623a1faa0483e64ddd6f41fe75feb.jpg" alt="" />
-                                        <div className="opacity"></div>
-                                        <div className="actions-container">
-                                            <button class="play-icon"><i class="i-play fa-solid fa-play"></i></button>
-                                        </div>
-                                    </div>
-                                    <div className="card-info">
-                                        <div className="title-wrapper">
-                                            <span>Say Trong Nụ Cười</span>
-                                        </div>
-                                        <div className="subtitle">
-                                            <a href="">Tăng Duy Tân</a>
-                                        </div>
-                                        <div className="time-release">Hôm qua</div>
-                                    </div>
-                                </div>
-                                <div className="media-right"></div>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>

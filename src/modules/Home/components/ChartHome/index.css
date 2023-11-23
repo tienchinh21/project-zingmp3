@@ -69,7 +69,7 @@
     justify-content: center;
     align-items: center;
     font-size: 12px;
-    margin-right: 10px;
+    margin-right: 15px;
     color: var(--song-item-action);
     font-weight: 700;
 }
@@ -78,19 +78,6 @@
     width: 22px;
     color: rgba(74, 144, 226, 0);
     font-size: 32px;
-}
-
-.song-prefix .number.is-top-1 {
-    -webkit-text-stroke: 1px #4a90e2;
-    opacity: 1;
-}
-
-.song-prefix .number.is-top-2 {
-    -webkit-text-stroke: 1px #50e3c2;
-}
-
-.song-prefix .number.is-top-3 {
-    -webkit-text-stroke: 1px #e35050;
 }
 
 .chart-song .subtitle {
@@ -124,4 +111,8 @@
 
 .btn-center .show-more:hover {
     background-color: hsla(0, 0%, 100%, .1);
+}
+
+.w41 {
+    width: 41%;
 }

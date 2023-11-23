@@ -60,7 +60,7 @@
 .media {
     align-items: center;
     display: flex;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 5px;
 }
 
@@ -103,7 +103,7 @@
 }
 
 .media .subtitle {
-    display: block;
+    display: flex;
     font-size: 12px;
     margin-top: 3px;
 }
@@ -156,10 +156,10 @@
 }
 
 
-.media-left:hover .opacity {
+.media:hover .opacity {
     visibility: visible;
 }
 
-.media-left:hover .actions {
+.media:hover .actions {
     visibility: visible;
 }
