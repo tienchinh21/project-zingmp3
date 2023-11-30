@@ -1,4 +1,5 @@
 import { Library, Radio, Discover, ZingChart, Recent, Charts, Topic, Top, Album, Favourite, Upload, Playlist, LiveTag } from '../../../../../shared/Svgs/index';
+import SvgIcon from '~/shared/components/SvgsIcon';
 
 const MenuItem = () => {
 
@@ -8,6 +9,7 @@ const MenuItem = () => {
                 <ul className="list-item">
                     <li className="item isActive">
                         <a href="">
+                            {/* <SvgIcon icon="Discover" width={24} height={24} /> */}
                             <Discover />
                             <span>Khám Phá</span>
                         </a>

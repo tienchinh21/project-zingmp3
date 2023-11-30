@@ -1,7 +1,17 @@
 import React, { useState } from 'react';
 import MediaItem from '~/shared/components/MediaItem';
+import clsx from 'clsx';
 
 import './index.css';
+
+const SplitArr = (arr, size) => {
+    const result = [];
+    for (let i = 0; i < arr.length; i += size) {
+        const chunk = arr.slice(i, i + size);
+        result.push(chunk);
+    }
+    return result;
+};
 
 const datNewRelease = [
     {
@@ -28,13 +38,65 @@ const datNewRelease = [
         artists: ["Gin Tuấn Kiệt", "Puka"],
         releaseTime: "Hôm qua"
     },
+    {
+        imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/1/4/b/314b95c08827ed1a05306cebee5cb945.jpg",
+        title: "Dancing Queen",
+        artists: ["Phí Phương Anh", "RIN9"],
+        releaseTime: "Hôm qua"
+    },
+    {
+        imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/c/3/0/3c30a4019913d4b2bd5498eaad359348.jpg",
+        title: "Mần Rể Miền Tây",
+        artists: ["Gin Tuấn Kiệt", "Puka"],
+        releaseTime: "Hôm qua"
+    },
+    {
+        imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/c/3/0/3c30a4019913d4b2bd5498eaad359348.jpg",
+        title: "Mần Rể Miền Tây",
+        artists: ["Gin Tuấn Kiệt", "Puka"],
+        releaseTime: "Hôm qua"
+    },
+    {
+        imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/c/3/0/3c30a4019913d4b2bd5498eaad359348.jpg",
+        title: "Mần Rể Miền Tây",
+        artists: ["Gin Tuấn Kiệt", "Puka"],
+        releaseTime: "Hôm qua"
+    },
+    {
+        imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/1/4/b/314b95c08827ed1a05306cebee5cb945.jpg",
+        title: "Dancing Queen",
+        artists: ["Phí Phương Anh", "RIN9"],
+        releaseTime: "Hôm qua"
+    },
+    {
+        imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/c/3/0/3c30a4019913d4b2bd5498eaad359348.jpg",
+        title: "Mần Rể Miền Tây",
+        artists: ["Gin Tuấn Kiệt", "Puka"],
+        releaseTime: "Hôm qua"
+    },
+    {
+        imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/c/3/0/3c30a4019913d4b2bd5498eaad359348.jpg",
+        title: "Mần Rể Miền Tây",
+        artists: ["Gin Tuấn Kiệt", "Puka"],
+        releaseTime: "Hôm qua"
+    },
+    {
+        imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/c/3/0/3c30a4019913d4b2bd5498eaad359348.jpg",
+        title: "Mần Rể Miền Tây",
+        artists: ["Gin Tuấn Kiệt", "Puka"],
+        releaseTime: "Hôm qua"
+    },
 ]
 
+const itemsOfColumn = 4;
+
+const songsGroups = SplitArr(datNewRelease, itemsOfColumn);
+
 const NewRelease = () => {
-    const [activeButton, setActiveButton] = useState('all');
+    const [selectedButton, setSelectedButton] = useState('all');
 
     const handleButtonClick = (button) => {
-        setActiveButton(button);
+        setSelectedButton(button);
     };
 
     return (
@@ -48,63 +110,44 @@ const NewRelease = () => {
             </h3>
             <div className="genre-select">
                 <button
-                    className={`btn-release ${activeButton === 'all' ? 'active' : ''}`}
+                    className={clsx('btn-release', { 'active': selectedButton === 'all' })}
                     onClick={() => handleButtonClick('all')}
                 >
                     Tất cả
                 </button>
+
                 <button
-                    className={`btn-release ${activeButton === 'vietnam' ? 'active' : ''}`}
+                    className={clsx('btn-release', { 'active': selectedButton === 'vietnam' })}
                     onClick={() => handleButtonClick('vietnam')}
                 >
                     Việt Nam
                 </button>
+
                 <button
-                    className={`btn-release ${activeButton === 'international' ? 'active' : ''}`}
+                    className={clsx('btn-release', { 'active': selectedButton === 'international' })}
                     onClick={() => handleButtonClick('international')}
                 >
                     Quốc tế
                 </button>
             </div>
             <div className="columns">
-                <div className="column">
-                    {datNewRelease.map((item, index) => (
-                        <div className="list-item" key={index}>
-                            <MediaItem
-                                imageUrl={item.imageUrl}
-                                title={item.title}
-                                artists={item.artists}
-                                releaseTime={item.releaseTime}
-                            />
-                        </div>
-                    ))}
-                </div>
-                <div className="column">
-                    {datNewRelease.map((item, index) => (
-                        <div className="list-item" key={index}>
-                            <MediaItem
-                                imageUrl={item.imageUrl}
-                                title={item.title}
-                                artists={item.artists}
-                                releaseTime={item.releaseTime}
-                            />
-                        </div>
-                    ))}
-                </div>
-                <div className="column">
-                    {datNewRelease.map((item, index) => (
-                        <div className="list-item" key={index}>
-                            <MediaItem
-                                imageUrl={item.imageUrl}
-                                title={item.title}
-                                artists={item.artists}
-                                releaseTime={item.releaseTime}
-                            />
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
+                {songsGroups.map((group, groupIndex) => (
+                    <div key={groupIndex} className="column">
+                        {group.map((item, itemIndex) => (
+                            <div className="list-item">
+                                <MediaItem
+                                    key={itemIndex}
+                                    imageUrl={item.imageUrl}
+                                    title={item.title}
+                                    artists={item.artists}
+                                    releaseTime={item.releaseTime}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                ))}
+            </div >
+        </div >
     )
 };
 

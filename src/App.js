@@ -1,12 +1,11 @@
 import { publicRoutes, privateRoutes } from "./router";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
 import './App.css';
 import './assets/style/common.css';
 import './assets/style/global.css'
 
-function App() {
+function App({ handleMenuClick }) {
     return (
         <div className="wrapper">
             <BrowserRouter>
@@ -18,12 +17,13 @@ function App() {
                             <Route
                                 key={index}
                                 path={route.path}
-                                element={<Page />}
+                                element={<Page handleMenuClick={handleMenuClick} />}
                             />
                         )
                     })}
                 </Routes>
             </BrowserRouter>
+            {/* <MenuSong /> */}
         </div>
     );
 }

@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import PlayListMenu from '~/shared/components/PlayListMenu';
 
-const SongItem = ({ item, style, className = "item" }) => {
+
+const SongItem = ({ item, style, className }) => {
 
     return (
         <div className={className} style={{ ...style }}>
@@ -20,8 +22,8 @@ const SongItem = ({ item, style, className = "item" }) => {
                                         <button className='play-icon'>
                                             <i class="i-play fa-solid fa-play"></i>
                                         </button>
-                                        <button className='btn dot'>
-                                            <i class="icon fa-solid fa-ellipsis"></i>
+                                        <button className='btn dot icon-more'>
+                                            <i className="icon fa-solid fa-ellipsis"></i>
                                         </button>
                                     </div>
                                 </div>
@@ -59,13 +61,15 @@ const SongItem = ({ item, style, className = "item" }) => {
 SongItem.propTypes = {
     image: PropTypes.string,
     title: PropTypes.string,
+    className: PropTypes.string,
     artist: PropTypes.array
 };
 
 SongItem.defaultProps = {
     image: '',
     title: '',
-    artist: []
+    className: 'item',
+    artist: [],
 }
 
 export default SongItem;
