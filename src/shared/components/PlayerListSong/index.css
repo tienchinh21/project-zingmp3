@@ -1,0 +1,123 @@
+.player-list-song {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: 90px;
+    width: 330px;
+    border-bottom: none;
+}
+
+.player-container {
+    height: calc(100vh - 90px);
+    max-height: calc(100vh - 90px);
+    bottom: 0;
+    right: 0;
+    position: relative;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+h6 {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+.player-container .header-bar {
+    padding: 14px 0;
+    position: relative;
+    z-index: 10000;
+}
+
+.player-container .header-bar .tab-bar {
+    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-container .bar-left {
+    flex: 1 1;
+    border-radius: 999px;
+    background-color: var(--alpha-bg);
+    padding: 3px;
+}
+
+.player-container .bar-left,
+.player-container .bar-right {
+    display: flex;
+    align-items: center;
+}
+
+.player-container .item.open {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .07);
+    background-color: var(--tab-active-bg);
+    color: var(--text-item-hover);
+}
+
+.player-container .bar-left .list-title {
+    font-weight: 100;
+}
+
+.player-container .tab-bar .item {
+    border-radius: 999px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.player-container .bar-left .has-text-white {
+    color: var(--navigation-text);
+}
+
+.player-container .bar-right button {
+    color: var(--text-primary);
+    background-color: var(--alpha-bg);
+    font-size: 14px;
+    border-radius: 999px;
+    width: 32px;
+    height: 32px;
+}
+
+.playlist-scroll .item-pinned {
+    padding-left: 8px;
+}
+
+.playlist-scroll img {
+    height: 40px !important;
+    width: 40px !important;
+}
+
+.playlist-scroll .media {
+    padding: 8px 15px;
+}
+
+.playlist-scroll .media.active-song {
+    background-color: var(--purple-primary);
+}
+
+.playlist-scroll .next-songs {
+    padding: 15px 8px 5px;
+}
+
+.playlist-scroll .next-songs .title {
+    color: var(--text-primary);
+    font-size: 14px;
+
+}
+
+.playlist-scroll .next-songs .subtitle {
+    display: flex;
+    color: rgba(254, 255, 255, 0.6);
+    align-items: center;
+}
+
+.playlist-scroll .next-songs .subtitle span {
+    font-size: 12px;
+    margin-right: 3px;
+}
+
+.playlist-scroll .next-songs .subtitle a {
+    font-size: 15px;
+    color: #c273ed;
+}

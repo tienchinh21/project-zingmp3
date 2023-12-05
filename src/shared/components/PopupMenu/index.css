@@ -1,0 +1,31 @@
+.menu {
+    background-color: #34224f;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 101;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    padding: 10px 0;
+}
+
+.menu-list button {
+    color: #dadada;
+    padding: 10px 20px 10px 14px;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+}
+
+.menu-list button:hover {
+    background-color: hsla(0, 0%, 100%, 0.1);
+    color: #fff;
+}
+
+.menu-list i {
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.icon-right {
+    margin-left: auto;
+}

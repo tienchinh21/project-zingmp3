@@ -1,5 +1,5 @@
 .wrapper {
     background-color: var(--layout-bg);
     display: flex;
-    height: 100%;
+    height: calc(100vh - 90px);
 }

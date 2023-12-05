@@ -1,0 +1,211 @@
+.player-control {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    bottom: 0;
+    cursor: pointer;
+    background-color: var(--layout-bg);
+}
+
+.player-control-wrapper {
+    height: 90px;
+    min-width: 768px;
+    padding: 0 20px;
+    background-color: var(--player-bg);
+    border-top: 1px solid var(--border-player);
+}
+
+.player-control-left {
+    position: relative;
+    width: 30%;
+    z-index: 1;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.player-control-left .media {
+    padding: 0;
+    width: 100%;
+}
+
+.player-control-left .media:hover {
+    background-color: transparent;
+}
+
+.player-control-left .media .player-media-left {
+    margin-right: 10px;
+}
+
+.player-control-left .media .player-media-left .thumbnail {
+    display: block;
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.player-control-left .media .player-media-content .title {
+    display: flex;
+}
+
+.player-control-left .media .player-media-content .title .song-name {
+    color: var(--player-text);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.player-control-left .media .player-media-right {
+    margin-left: 10px;
+}
+
+.player-control-left .media .player-media-right .level {
+    display: flex;
+    align-items: center;
+}
+
+.player-control-left .media .player-media-right .level .btn {
+    font-size: 20px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.player-control-left .media .player-media-right .level .btn .icon {
+    font-size: 16px;
+    padding: 7px 3px;
+    color: #fff;
+    margin: 0 2px;
+}
+
+.player-control-left .media .player-media-right .level .btn:hover {
+    background-color: var(--hover-opacity);
+}
+
+.player-control-center {
+    flex-grow: 1;
+    max-width: 40vw;
+}
+
+.player-control-center .player-action {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-center .player-action button {
+    margin: 0 7px;
+    font-size: 14px;
+    padding: 3px;
+    color: var(--player-text);
+    border-radius: 50%;
+}
+
+.player-control-center .player-action button:not(:nth-child(3)):hover {
+    background-color: var(--hover-opacity);
+}
+
+.fs16px {
+    font-size: 16px;
+}
+
+.fs40px {
+    font-size: 40px;
+}
+
+.pd5 {
+    padding: 5px;
+}
+
+.player-control-center .player-action button .i-play {
+    font-size: 35px;
+}
+
+.player-control-center .player-action button .i-play:hover {
+    color: var(--link-text-hover);
+}
+
+.player-control-center .time {
+    text-align: right;
+    opacity: .5;
+    font-size: 12px;
+    color: var(--player-text);
+}
+
+.player-control-center .time.left {
+    margin-right: 10px;
+}
+
+.player-control-center .time.right {
+    margin-left: 10px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    transition: background .3s;
+}
+
+input[type='range']:hover::-webkit-slider-thumb {
+    background: #fff;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    background: transparent;
+}
+
+input[type='range']:hover::-webkit-slider-thumb {
+    background: #fff;
+    cursor: pointer;
+
+}
+
+.player-control-right {
+    display: flex;
+    width: 30%;
+    justify-content: flex-end;
+}
+
+.player-control-right .level-item button {
+    padding: 4px;
+    margin: 0 3px;
+    border-radius: 50%;
+}
+
+.player-control-right .level-item button i {
+    font-size: 15px;
+    padding: 5px;
+    color: #fff;
+}
+
+.player-control-right .divide {
+    height: 33px;
+    width: 1px;
+    background-color: var(--border-player);
+    margin: 0 20px;
+}
+
+.player-control-right button:hover {
+    background-color: var(--hover-opacity);
+}
+
+.player-control-right button.list {
+    position: relative;
+    border-radius: 4px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 7px;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 12px;
+    background-color: var(--purple-primary);
+    color: #fff;
+}
+
+.player-control-right button.list:hover {
+    filter: brightness(.9);
+}

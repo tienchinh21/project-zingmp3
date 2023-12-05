@@ -80,7 +80,7 @@
 }
 
 .list-item .media-right .btn-item {
-    padding: 6px;
+    padding: 1px 2px;
     margin: 0 4px;
     font-size: 14px;
     border-radius: 999px;
@@ -94,7 +94,7 @@
     padding: 5px;
     border-radius: 50%;
     color: var(--text-primary);
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .list-item .media-right .duration {

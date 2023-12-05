@@ -1,16 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import PlayListMenu from '~/shared/components/PlayListMenu';
+import PopupMenu from '~/shared/components/PopupMenu';
 
 
 const SongItem = ({ item, style, className }) => {
+
+    const handleClick = (event) => {
+        event.preventDefault();
+    };
+
+    const [isPopupOpen, setPopupOpen] = useState(false);
+    const [popupPosition, setPopupPosition] = useState({ top: '0', left: '0' });
+
+    const handleMoreClick = (event) => {
+        const iconMoreRect = event.currentTarget.getBoundingClientRect();
+        const popupTop = iconMoreRect.bottom + window.scrollY;
+        const popupLeft = iconMoreRect.left + window.scrollX;
+        setPopupPosition({ top: `${popupTop}px`, left: `${popupLeft}px` });
+        setPopupOpen((prevIsPopupOpen) => !prevIsPopupOpen);
+    };
 
     return (
         <div className={className} style={{ ...style }}>
             <div className="playlist-wrapper">
                 <div className="card">
                     <div>
-                        <a className='link-item' href="">
+                        <a className='link-item' href="" onClick={handleClick}>
                             <div className="card-image">
                                 <img src={item.image} />
                                 <div className='opacity'></div>
@@ -22,9 +37,13 @@ const SongItem = ({ item, style, className }) => {
                                         <button className='play-icon'>
                                             <i class="i-play fa-solid fa-play"></i>
                                         </button>
-                                        <button className='btn dot icon-more'>
+                                        {/* <button className='btn dot icon-more'>
+                                            <i className="icon fa-solid fa-ellipsis"></i>
+                                        </button> */}
+                                        <button className='btn dot icon-more' onClick={handleMoreClick}>
                                             <i className="icon fa-solid fa-ellipsis"></i>
                                         </button>
+                                        <PopupMenu isOpen={isPopupOpen} position={popupPosition} />
                                     </div>
                                 </div>
                             </div>

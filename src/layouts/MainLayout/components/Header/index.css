@@ -7,7 +7,7 @@
     right: 0;
     height: 70px;
     padding: 0 var(--padding-section);
-    /* right: 330px; */
+    right: 333px;
     z-index: 99;
 }
 

@@ -20,7 +20,12 @@
     --song-item-action: hsla(0, 0%, 100%, 0.5);
     --white: #fff;
     --border-secondary: hsla(0, 0%, 100%, 0.05);
-
+    --border-player: hsla(0, 0%, 100%, 0.1);
+    --player-bg: #130c1c;
+    --player-text: #fff;
+    --tab-active-bg: hsla(0, 0%, 100%, 0.3);
+    --text-item-hover: #fff;
+    --navigation-text: #dadada;
 }
 
 .d-block {
@@ -37,6 +42,14 @@
 
 .mgt16 {
     margin-top: 16px;
+}
+
+.mgb-5 {
+    margin-bottom: 5px;
+}
+
+.mgt-5 {
+    margin-top: 5px;
 }
 
 .channel-section {
@@ -58,4 +71,15 @@
 
 .song-prefix .number.is-top-3 {
     -webkit-text-stroke: 1px #e35050;
+}
+
+.f-al-c {
+    display: flex;
+    align-items: center;
+}
+
+.f-cc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
