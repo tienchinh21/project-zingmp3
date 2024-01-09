@@ -1,4 +1,5 @@
 import React from 'react';
+import { Tooltip } from '@mui/material';
 
 import './index.css';
 import '../../../assets/style/common.css'
@@ -19,10 +20,14 @@ const PlayerListSong = () => {
                         </div>
                         <div className="bar-right">
                             <div className="item">
-                                <button><i class="fa-regular fa-clock"></i></button>
+                                <Tooltip title='Hẹn giờ dừng phát nhạc' arrow>
+                                    <button><i class="fa-regular fa-clock"></i></button>
+                                </Tooltip>
                             </div>
                             <div className='item'>
-                                <button><i class="fa-solid fa-ellipsis"></i></button>
+                                <Tooltip title='Khác' arrow>
+                                    <button><i class="fa-solid fa-ellipsis"></i></button>
+                                </Tooltip>
                             </div>
                         </div>
                     </div>

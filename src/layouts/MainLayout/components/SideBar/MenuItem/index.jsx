@@ -1,4 +1,4 @@
-import { Library, Radio, Discover, ZingChart, Recent, Charts, Topic, Top, Album, Favourite, Upload, Playlist, LiveTag } from '../../../../../shared/Svgs/index';
+import { Library, Radio, Discover, ZingChart, Recent, Charts, Topic, Top, Album, Favourite, Upload, Playlist, LiveTag } from '~/shared/Svgs/index';
 import SvgIcon from '~/shared/components/SvgsIcon';
 
 const MenuItem = () => {

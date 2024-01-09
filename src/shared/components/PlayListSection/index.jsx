@@ -12,7 +12,7 @@ const PlayListSection = (props) => {
                     <div className="carousel">
                         <div className="carousel__container">
                             {props.data.map((item, index) => (
-                                <SongItem key={index} item={item} className={props.className} style={props.style} />
+                                <SongItem key={props.titleWrapper + index} item={{ ...item, id: props.titleWrapper + index }} className={props.className} style={props.style} />
                             ))}
                         </div>
                     </div>

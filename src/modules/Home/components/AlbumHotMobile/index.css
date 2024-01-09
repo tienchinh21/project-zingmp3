@@ -1,0 +1,11 @@
+.album-container .more-list-album {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album-container .more-list-album .item-album {
+    width: 45%;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-bottom: 30px;
+}

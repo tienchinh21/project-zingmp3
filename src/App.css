@@ -1,5 +1,16 @@
 .wrapper {
     background-color: var(--layout-bg);
     display: flex;
-    height: calc(100vh - 90px);
+    /* height: calc(100vh - 90px); */
+    height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        background-color: #fcfcfc;
+        position: relative;
+        height: 100%;
+        padding-top: 104px;
+        display: block;
+    }
 }

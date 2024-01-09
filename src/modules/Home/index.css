@@ -223,3 +223,18 @@
 }
 
 /* CSS LIST LOVE */
+
+
+/* CSS Mobile */
+
+.main-mobile {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-mobile {
+        display: none;
+    }
+}
+
+/* CSS Mobile */

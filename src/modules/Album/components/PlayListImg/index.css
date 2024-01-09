@@ -1,0 +1,93 @@
+.alb-media-left {
+    width: 300px;
+    float: left;
+    position: sticky;
+    top: 110px;
+}
+
+.alb-header-thumbnail {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.alb-header-thumbnail .link-item {
+    transition: border-radius 2s ease-out;
+}
+
+.alb-header-thumbnail:hover img {
+    transform: scale(1.1) translateZ(0);
+}
+
+.alb-header-thumbnail img {
+    transition: transform .7s;
+}
+
+.alb-media-content {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.alb-media-content .content-top {
+    text-align: center;
+}
+
+.alb-media-content .content-top .title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.alb-media-content .content-top .release,
+.alb-media-content .content-top .artists,
+.alb-media-content .content-top .like {
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+.alb-media-content .content-top .artists a {
+    color: var(--text-secondary);
+}
+
+.alb-media-content .btn-actions {
+    margin-top: 16px;
+}
+
+.alb-media-content .btn-actions .level {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alb-media-content .btn-actions .btn-playlist {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    padding: 9px 24px;
+    border-radius: 999px;
+}
+
+.alb-media-content .btn-actions .btn-playlist.btn-active {
+    background-color: var(--purple-primary);
+    border-color: var(--purple-primary);
+    color: var(--white);
+}
+
+.alb-media-content .btn-actions .btn-playlist span {
+    text-transform: uppercase;
+}
+
+.alb-media-content .btn-actions .level-item button {
+    width: 35px;
+    height: 35px;
+    background-color: var(--alpha-bg);
+    border-radius: 999px;
+    color: #fff;
+}

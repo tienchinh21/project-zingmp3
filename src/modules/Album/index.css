@@ -1,0 +1,7 @@
+.sticky-playlist {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Đảm bảo nó hiển thị trên các phần tử khác */
+}

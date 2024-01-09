@@ -1,23 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import PopupMenu from '~/shared/components/PopupMenu';
-
+import { Box, ClickAwayListener, Popper, Tooltip } from '@mui/material';
 
 const SongItem = ({ item, style, className }) => {
+    const [anchorEl, setAnchorEl] = useState(null);
+
+    const handleMoreClick = (event) => {
+        setAnchorEl(anchorEl ? null : event.currentTarget);
+        console.log(event);
+    };
+
+    const open = Boolean(anchorEl);
+    const id = open ? 'poper-' + item.id : undefined;
 
     const handleClick = (event) => {
         event.preventDefault();
-    };
-
-    const [isPopupOpen, setPopupOpen] = useState(false);
-    const [popupPosition, setPopupPosition] = useState({ top: '0', left: '0' });
-
-    const handleMoreClick = (event) => {
-        const iconMoreRect = event.currentTarget.getBoundingClientRect();
-        const popupTop = iconMoreRect.bottom + window.scrollY;
-        const popupLeft = iconMoreRect.left + window.scrollX;
-        setPopupPosition({ top: `${popupTop}px`, left: `${popupLeft}px` });
-        setPopupOpen((prevIsPopupOpen) => !prevIsPopupOpen);
     };
 
     return (
@@ -31,19 +29,51 @@ const SongItem = ({ item, style, className }) => {
                                 <div className='opacity'></div>
                                 <div className='actions actions-container'>
                                     <div className='playlist-actions'>
-                                        <button className='btn like'>
-                                            <i class="icon fa-regular fa-heart"></i>
-                                        </button>
+                                        <Tooltip title='Thêm vào thư viện' arrow>
+                                            <button className='btn like'>
+                                                <i class="icon fa-regular fa-heart"></i>
+                                            </button>
+                                        </Tooltip>
                                         <button className='play-icon'>
                                             <i class="i-play fa-solid fa-play"></i>
                                         </button>
-                                        {/* <button className='btn dot icon-more'>
-                                            <i className="icon fa-solid fa-ellipsis"></i>
-                                        </button> */}
-                                        <button className='btn dot icon-more' onClick={handleMoreClick}>
-                                            <i className="icon fa-solid fa-ellipsis"></i>
-                                        </button>
-                                        <PopupMenu isOpen={isPopupOpen} position={popupPosition} />
+                                        <Tooltip title='Khác' arrow>
+                                            <button aria-describedby={id} className='btn dot icon-more' onClick={handleMoreClick}>
+                                                <i className="icon fa-solid fa-ellipsis"></i>
+                                            </button>
+                                        </Tooltip>
+                                        <Popper id={id} open={open} anchorEl={anchorEl}
+                                            sx={{ zIndex: 10 }}
+                                            placement="right-start"
+                                            disablePortal={false}
+                                            modifiers={[
+                                                {
+                                                    name: 'flip',
+                                                    enabled: true,
+                                                    options: {
+                                                        altBoundary: true,
+                                                        rootBoundary: 'document',
+                                                        padding: 8,
+                                                    },
+                                                },
+                                                {
+                                                    name: 'preventOverflow',
+                                                    enabled: false,
+                                                    options: {
+                                                        altAxis: true,
+                                                        altBoundary: true,
+                                                        tether: true,
+                                                        rootBoundary: 'document',
+                                                        padding: 8,
+                                                    },
+                                                },
+
+                                            ]}
+                                        >
+                                            <ClickAwayListener onClickAway={() => setAnchorEl(null)}>
+                                                <div><PopupMenu /></div>
+                                            </ClickAwayListener>
+                                        </Popper>
                                     </div>
                                 </div>
                             </div>

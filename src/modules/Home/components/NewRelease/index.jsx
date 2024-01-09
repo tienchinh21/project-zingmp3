@@ -4,50 +4,6 @@ import clsx from 'clsx';
 
 import './index.css';
 
-const SplitArr = (arr, size) => {
-    const result = [];
-    for (let i = 0; i < arr.length; i += size) {
-        const chunk = arr.slice(i, i + size);
-        result.push(chunk);
-    }
-    return result;
-};
-
-// const dataNewRelease = [
-//     {
-//         imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/1/4/b/314b95c08827ed1a05306cebee5cb945.jpg",
-//         title: "Dancing Queen",
-//         artists: ["Phí Phương Anh", "RIN9"],
-//         releaseTime: "Hôm qua"
-//     },
-//     {
-//         imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/1/4/b/314b95c08827ed1a05306cebee5cb945.jpg",
-//         title: "Dancing Queen",
-//         artists: ["Phí Phương Anh", "RIN9"],
-//         releaseTime: "Hôm qua"
-//     },
-//     {
-//         imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/1/4/b/314b95c08827ed1a05306cebee5cb945.jpg",
-//         title: "Dancing Queen",
-//         artists: ["Phí Phương Anh", "RIN9"],
-//         releaseTime: "Hôm qua"
-//     },
-//     {
-//         imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/1/4/b/314b95c08827ed1a05306cebee5cb945.jpg",
-//         title: "Dancing Queen",
-//         artists: ["Phí Phương Anh", "RIN9"],
-//         releaseTime: "Hôm qua"
-//     },
-//     {
-//         imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/1/4/b/314b95c08827ed1a05306cebee5cb945.jpg",
-//         title: "Dancing Queen",
-//         artists: ["Phí Phương Anh", "RIN9"],
-//         releaseTime: "Hôm qua"
-//     },
-
-// ]
-
-
 const dataNewRelease = [
     {
         category: 'all',
@@ -59,10 +15,28 @@ const dataNewRelease = [
                 releaseTime: "Hôm qua"
             },
             {
-                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/1/4/b/314b95c08827ed1a05306cebee5cb945.jpg",
-                title: "Dancing Queen",
-                artists: ["Phí Phương Anh", "RIN9"],
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/4/8/c/c48cbfb8e6d694701da37eced0a35ab6.jpg",
+                title: "Xin Đừng Ôm Anh",
+                artists: ["Da LAB", "RIN9"],
                 releaseTime: "Hôm qua"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/e/2/7/c/e27cb712d10e992e617ef84867ed9f78.jpg",
+                title: "Trái Tim Không Ngủ Yên",
+                artists: ["Lâm Bảo Ngọc", "Hoàng Hải"],
+                releaseTime: "Hôm qua"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/banner/9/9/9/b/999b611521d71da50d2ccbc3b9418d3a.jpg",
+                title: "Em Khóc Được Rồi",
+                artists: ["Phượng Vũ"],
+                releaseTime: "Hôm qua"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/f/2/8/e/f28e8e80c8fc209fa9e44030e77fda58.jpg",
+                title: "Gió Đêm Qua Đường",
+                artists: ["DICKSON", "Tiến Nguyễn"],
+                releaseTime: "3 ngày trước"
             },
             {
                 imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/1/4/b/314b95c08827ed1a05306cebee5cb945.jpg",
@@ -71,16 +45,40 @@ const dataNewRelease = [
                 releaseTime: "Hôm qua"
             },
             {
-                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/1/4/b/314b95c08827ed1a05306cebee5cb945.jpg",
-                title: "Dancing Queen",
-                artists: ["Phí Phương Anh", "RIN9"],
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/4/8/c/c48cbfb8e6d694701da37eced0a35ab6.jpg",
+                title: "Xin Đừng Ôm Anh",
+                artists: ["Da LAB", "RIN9"],
                 releaseTime: "Hôm qua"
             },
             {
-                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/1/4/b/314b95c08827ed1a05306cebee5cb945.jpg",
-                title: "Dancing Queen",
-                artists: ["Phí Phương Anh", "RIN9"],
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/e/2/7/c/e27cb712d10e992e617ef84867ed9f78.jpg",
+                title: "Trái Tim Không Ngủ Yên",
+                artists: ["Lâm Bảo Ngọc", "Hoàng Hải"],
                 releaseTime: "Hôm qua"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/banner/9/9/9/b/999b611521d71da50d2ccbc3b9418d3a.jpg",
+                title: "Em Khóc Được Rồi",
+                artists: ["Phượng Vũ"],
+                releaseTime: "Hôm qua"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/f/2/8/e/f28e8e80c8fc209fa9e44030e77fda58.jpg",
+                title: "Gió Đêm Qua Đường",
+                artists: ["DICKSON", "Tiến Nguyễn"],
+                releaseTime: "3 ngày trước"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/0/0/7/6/007682c41e2f2088a2f1b8e559f1e7e5.jpg",
+                title: "Closer Than This",
+                artists: ["Jimin"],
+                releaseTime: "6 ngày trước"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/7/4/4/a/744ac2508966984f7dea1d0189f71468.jpg",
+                title: "Điều Ước Giáng Sinh",
+                artists: ["O.lew"],
+                releaseTime: "7 ngày trước"
             },
         ]
     },
@@ -94,10 +92,64 @@ const dataNewRelease = [
                 releaseTime: "Hôm qua"
             },
             {
-                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/c/3/0/3c30a4019913d4b2bd5498eaad359348.jpg",
-                title: "Mần Rể Miền Tây",
-                artists: ["Gin Tuấn Kiệt", "Puka"],
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/1/4/b/314b95c08827ed1a05306cebee5cb945.jpg",
+                title: "Dancing Queen",
+                artists: ["Phí Phương Anh", "RIN9"],
                 releaseTime: "Hôm qua"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/4/8/c/c48cbfb8e6d694701da37eced0a35ab6.jpg",
+                title: "Xin Đừng Ôm Anh",
+                artists: ["Da LAB", "RIN9"],
+                releaseTime: "Hôm qua"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/e/2/7/c/e27cb712d10e992e617ef84867ed9f78.jpg",
+                title: "Trái Tim Không Ngủ Yên",
+                artists: ["Lâm Bảo Ngọc", "Hoàng Hải"],
+                releaseTime: "Hôm qua"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/banner/9/9/9/b/999b611521d71da50d2ccbc3b9418d3a.jpg",
+                title: "Em Khóc Được Rồi",
+                artists: ["Phượng Vũ"],
+                releaseTime: "Hôm qua"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/f/2/8/e/f28e8e80c8fc209fa9e44030e77fda58.jpg",
+                title: "Gió Đêm Qua Đường",
+                artists: ["DICKSON", "Tiến Nguyễn"],
+                releaseTime: "3 ngày trước"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/1/4/b/314b95c08827ed1a05306cebee5cb945.jpg",
+                title: "Dancing Queen",
+                artists: ["Phí Phương Anh", "RIN9"],
+                releaseTime: "Hôm qua"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/4/8/c/c48cbfb8e6d694701da37eced0a35ab6.jpg",
+                title: "Xin Đừng Ôm Anh",
+                artists: ["Da LAB", "RIN9"],
+                releaseTime: "Hôm qua"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/e/2/7/c/e27cb712d10e992e617ef84867ed9f78.jpg",
+                title: "Trái Tim Không Ngủ Yên",
+                artists: ["Lâm Bảo Ngọc", "Hoàng Hải"],
+                releaseTime: "Hôm qua"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/banner/9/9/9/b/999b611521d71da50d2ccbc3b9418d3a.jpg",
+                title: "Em Khóc Được Rồi",
+                artists: ["Phượng Vũ"],
+                releaseTime: "Hôm qua"
+            },
+            {
+                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/f/2/8/e/f28e8e80c8fc209fa9e44030e77fda58.jpg",
+                title: "Gió Đêm Qua Đường",
+                artists: ["DICKSON", "Tiến Nguyễn"],
+                releaseTime: "3 ngày trước"
             },
             {
                 imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/c/3/0/3c30a4019913d4b2bd5498eaad359348.jpg",
@@ -105,13 +157,6 @@ const dataNewRelease = [
                 artists: ["Gin Tuấn Kiệt", "Puka"],
                 releaseTime: "Hôm qua"
             },
-            {
-                imageUrl: "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/c/3/0/3c30a4019913d4b2bd5498eaad359348.jpg",
-                title: "Mần Rể Miền Tây",
-                artists: ["Gin Tuấn Kiệt", "Puka"],
-                releaseTime: "Hôm qua"
-            },
-
         ]
     },
     {
@@ -147,17 +192,17 @@ const dataNewRelease = [
 ]
 
 const itemsOfColumn = 4;
-
-const songsGroups = SplitArr(dataNewRelease, itemsOfColumn);
+const countColumn = 3;
 
 const NewRelease = () => {
     const [selectedButton, setSelectedButton] = useState('all');
 
-
     const handleButtonClick = (button) => {
         setSelectedButton(button);
     };
+
     const filteredData = dataNewRelease.find((category) => category.category === selectedButton);
+
 
     return (
         <div className="new-release channel-section">
@@ -191,52 +236,23 @@ const NewRelease = () => {
                 </button>
             </div>
             <div className="columns">
-                {/* {songsGroups.map((group, groupIndex) => (
-                    <div key={groupIndex} className="column">
-                        {group.map((item, itemIndex) => (
-                            <div className="list-item">
-                                <MediaItem
-                                    key={itemIndex}
-                                    imageUrl={item.imageUrl}
-                                    title={item.title}
-                                    artists={item.artists}
-                                    releaseTime={item.releaseTime}
-                                />
-                            </div>
-                        ))}
+                {Array.from(Array(countColumn).keys()).map((value, index) => (
+                    <div className="column" key={"column" + index}>
+                        {filteredData &&
+                            filteredData.items.slice(itemsOfColumn * index, (index + 1) * itemsOfColumn).map((item, itemIndex) => (
+                                <div key={itemIndex} className="list-item">
+                                    <MediaItem
+                                        imageUrl={item.imageUrl}
+                                        title={item.title}
+                                        artists={item.artists}
+                                        releaseTime={item.releaseTime}
+                                    />
+                                </div>
+                            ))}
                     </div>
-                ))} */}
-                <div className="column">
-                    {filteredData &&
-                        filteredData.items.map((item, itemIndex) => (
-                            <div key={itemIndex} className="list-item">
-                                <MediaItem
-                                    imageUrl={item.imageUrl}
-                                    title={item.title}
-                                    artists={item.artists}
-                                    releaseTime={item.releaseTime}
-                                />
-                            </div>
-                        ))}
-                </div>
-                {/* {songsGroups.map((group, groupIndex) => (
-                    <div key={groupIndex} className="column">
-                        {group.map((item, itemIndex) => (
-                            <div className="list-item">
-                                <MediaItem
-                                    key={itemIndex}
-                                    imageUrl={item.imageUrl}
-                                    title={item.title}
-                                    artists={item.artists}
-                                    releaseTime={item.releaseTime}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                ))} */}
-
-            </div >
-        </div >
+                ))}
+            </div>
+        </div>
     )
 };
 

@@ -23,7 +23,6 @@ function App({ handleMenuClick }) {
                     })}
                 </Routes>
             </BrowserRouter>
-            {/* <MenuSong /> */}
         </div>
     );
 }

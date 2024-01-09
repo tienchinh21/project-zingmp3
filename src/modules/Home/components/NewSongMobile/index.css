@@ -1,0 +1,46 @@
+h2 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+.container-mb {
+    padding: 15px;
+}
+
+.container-mb .header-new-song .title a {
+    color: #32323d;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.list-song .list-item {
+    padding: 5px 10px;
+}
+
+.list-song .list-item .card {
+    display: flex;
+    position: relative;
+}
+
+.list-song .list-item .link-item {
+    height: 50px;
+    width: 50px;
+    display: block;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.container-mb .title-new-song {
+    font-size: 14px;
+    color: #32323d;
+    font-weight: bold;
+    display: block;
+}
+
+.container-mb .artist {
+    font-size: 12px;
+    color: #a0a0a0;
+    margin-top: 5px;
+    display: block;
+}

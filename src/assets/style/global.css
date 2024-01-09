@@ -50,11 +50,16 @@ figure {
 /* CSS Main-Page */
 
 .main-page {
-    margin-right: 330px;
     position: relative;
-    width: calc(100% - 570px);
-    /* width: 100%; */
-    border-right: 1px solid hsla(0, 0%, 100%, 0.3);
+    width: calc(100% - 0px);
+    /* border-right: 1px solid hsla(0, 0%, 100%, 0.3); */
+}
+
+@media only screen and (max-width: 768px) {
+    .main-page {
+        border-right: none;
+        display: none;
+    }
 }
 
 .test {

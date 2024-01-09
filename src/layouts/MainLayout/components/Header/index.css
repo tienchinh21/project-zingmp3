@@ -7,8 +7,14 @@
     right: 0;
     height: 70px;
     padding: 0 var(--padding-section);
-    right: 333px;
+    /* right: 333px; */
     z-index: 99;
+}
+
+@media only screen and (max-width: 768px) {
+    .header-zmp3 {
+        display: none;
+    }
 }
 
 .header-wrapper {

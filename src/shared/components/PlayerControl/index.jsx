@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Tooltip } from '@mui/material';
 
 import './index.css';
 
@@ -46,12 +47,17 @@ const PlayerControl = () => {
                 <div className="player-control-center">
                     <div className="level-item">
                         <div className="player-action">
-                            <button><i class="fs16px pd5 fa-solid fa-shuffle"></i></button>
+                            <Tooltip title='Bật phát bài hát ngẫu nhiên' placement="top" arrow>
+                                <button>
+                                    <i class="fs16px pd5 fa-solid fa-shuffle"></i>
+                                </button>
+                            </Tooltip>
                             <button><i class="fs16px pd5 fa-solid fa-backward"></i></button>
-                            {/* <button class="play-icon"><i class="i-play fa-solid fa-play"></i></button> */}
-                            <button><i class="i-play fa-regular fa-circle-play"></i></button>
+                            <button><i class="i-play fa-solid fa-pause"></i></button>
                             <button><i class="fs16px pd5 fa-solid fa-forward"></i></button>
-                            <button><i class="fs16px pd5 fa-solid fa-repeat"></i></button>
+                            <Tooltip title='Bật phát lại tất cả' placement="top" arrow>
+                                <button><i class="fs16px pd5 fa-solid fa-repeat"></i></button>
+                            </Tooltip>
                         </div>
                     </div>
                     <div className="level-item mgb-5 mgt-5">
@@ -73,18 +79,22 @@ const PlayerControl = () => {
                 <div className="player-control-right">
                     <div className="level-item">
                         <button>
-                            <i class="fa-solid fa-tv"></i>
+                            <i class="fa-regular fa-square"></i>
                         </button>
                     </div>
                     <div className="level-item">
-                        <button>
-                            <i class="fa-solid fa-microphone"></i>
-                        </button>
+                        <Tooltip title='Lời bài hát' placement="top" arrow>
+                            <button>
+                                <i class="fa-solid fa-microphone"></i>
+                            </button>
+                        </Tooltip>
                     </div>
                     <div className="level-item">
-                        <button>
-                            <i class="fa-regular fa-window-restore"></i>
-                        </button>
+                        <Tooltip title='Chế độ cửa sổ' placement="top" arrow>
+                            <button>
+                                <i class="fa-regular fa-window-restore"></i>
+                            </button>
+                        </Tooltip>
                     </div>
                     <div className="level-item" style={{ justifyContent: 'left' }}>
                         <div className="volume">

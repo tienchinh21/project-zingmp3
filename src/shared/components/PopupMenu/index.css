@@ -1,8 +1,6 @@
 .menu {
     background-color: #34224f;
     border-radius: 8px;
-    position: absolute;
-    z-index: 101;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     width: 250px;
     padding: 10px 0;

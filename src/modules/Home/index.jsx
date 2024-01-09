@@ -1,4 +1,5 @@
-import { MediaForFan, NewRelease, ChartHome, ChartWeek, ListLiveStream, Collapsed } from '~/modules/Home/components';
+import ElWrapper from '~/shared/components/ElWrapper';
+import { MediaForFan, NewRelease, ChartHome, ChartWeek, ListLiveStream, Collapsed, NewSongMobile, AlbumHotMobile, Top100Mobile, MvMobile } from '~/modules/Home/components';
 import PlayListSection from '~/shared/components/PlayListSection';
 
 import img1R from '../../../src/assets/images/home/listRecent/img1.jpg';
@@ -78,32 +79,34 @@ const dataForFan = [
 
 const Home = () => {
     return (
-        <div className='main-page'>
-            <div className='test'>
-                <main className='main'>
-                    <div className='home-page-content'>
-                        <PlayListSection titleWrapper="Gần Đây" data={dataListRecent} single={dataListRecent.single} />
-                        <PlayListSection titleWrapper="Có Thể Bạn Muốn Nghe" data={dataListRecommend} className="item-recommend" style={{ width: '20%' }} />
-                        <NewRelease />
-                        <PlayListSection titleWrapper="Chill" data={dataListChill} className="item-love" style={{ width: '20%' }} />
-                        <PlayListSection titleWrapper="Remix là lên luôn" data={dataListRemix} className="item-recommend" style={{ width: '20%' }} />
-                        <PlayListSection titleWrapper="Nghệ sĩ yêu thích" data={dataListLove} className="item-love" style={{ width: '20%' }} />
-                        <PlayListSection titleWrapper="Nghệ sĩ thịnh hành" data={dataListSingle} className="item-love" style={{ width: '20%' }} />
-                        <PlayListSection data={dataForFan} className="item-recommend" style={{ width: '20%' }}>
-                            <MediaForFan
-                                imageUrl="https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/1/7/3/c/173ce5cfc42b83b9ebe59d4441fbae60.jpg"
-                                subtitle="Vì bạn đã nghe"
-                                title="Acoustic Thư Giãn"
-                            />
-                        </PlayListSection>
-                        <ChartHome />
-                        <ChartWeek />
-                        <ListLiveStream />
-                        <Collapsed />
-                    </div>
-                </main>
+        <>
+            <ElWrapper>
+                <PlayListSection titleWrapper="Gần Đây" data={dataListRecent} single={dataListRecent.single} />
+                <PlayListSection titleWrapper="Có Thể Bạn Muốn Nghe" data={dataListRecommend} className="item-recommend" style={{ width: '20%' }} />
+                <NewRelease />
+                <PlayListSection titleWrapper="Chill" data={dataListChill} className="item-love" style={{ width: '20%' }} />
+                <PlayListSection titleWrapper="Remix là lên luôn" data={dataListRemix} className="item-recommend" style={{ width: '20%' }} />
+                <PlayListSection titleWrapper="Nghệ sĩ yêu thích" data={dataListLove} className="item-love" style={{ width: '20%' }} />
+                <PlayListSection titleWrapper="Nghệ sĩ thịnh hành" data={dataListSingle} className="item-love" style={{ width: '20%' }} />
+                <PlayListSection data={dataForFan} className="item-recommend" style={{ width: '20%' }}>
+                    <MediaForFan
+                        imageUrl="https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/1/7/3/c/173ce5cfc42b83b9ebe59d4441fbae60.jpg"
+                        subtitle="Vì bạn đã nghe"
+                        title="Acoustic Thư Giãn"
+                    />
+                </PlayListSection>
+                <ChartHome />
+                <ChartWeek />
+                <ListLiveStream />
+                <Collapsed />
+            </ElWrapper>
+            <div className="main-mobile">
+                <NewSongMobile />
+                <AlbumHotMobile />
+                <Top100Mobile />
+                <MvMobile />
             </div>
-        </div>
+        </>
     )
 }
 

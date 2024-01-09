@@ -1,4 +1,5 @@
 import { Download } from "~/shared/Svgs";
+import { Tooltip } from "@mui/material";
 
 const SectionUser = () => {
     return (
@@ -10,9 +11,11 @@ const SectionUser = () => {
                 </a>
             </div>
             <div className="setting-item">
-                <button>
-                    <i class="icon-setting fa-solid fa-gear"></i>
-                </button>
+                <Tooltip title='Cài đặt' arrow>
+                    <button>
+                        <i class="icon-setting fa-solid fa-gear"></i>
+                    </button>
+                </Tooltip>
             </div>
             <div className="user-setting">
                 <div className="avt">
