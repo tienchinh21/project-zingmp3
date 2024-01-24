@@ -6,12 +6,12 @@ const MainLayout = ({ children }) => {
     return (
         <>
             <SideBar />
-            <HeaderMb />
+            {/* <HeaderMb /> */}
             <Header />
             {children}
             {/* <PlayerControl /> */}
             {/* <PlayerListSong /> */}
-            <FooterMb />
+            {/* <FooterMb /> */}
         </>
     );
 };

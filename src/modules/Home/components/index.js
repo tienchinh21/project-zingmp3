@@ -8,3 +8,4 @@ export { default as NewSongMobile } from './NewSongMobile';
 export { default as AlbumHotMobile } from './AlbumHotMobile';
 export { default as Top100Mobile } from './Top100Mobile';
 export { default as MvMobile } from './MvMobile';
+export { default as TestMobile } from './TestMobile';

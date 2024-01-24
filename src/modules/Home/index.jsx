@@ -1,5 +1,5 @@
 import ElWrapper from '~/shared/components/ElWrapper';
-import { MediaForFan, NewRelease, ChartHome, ChartWeek, ListLiveStream, Collapsed, NewSongMobile, AlbumHotMobile, Top100Mobile, MvMobile } from '~/modules/Home/components';
+import { MediaForFan, NewRelease, ChartHome, ChartWeek, ListLiveStream, Collapsed, NewSongMobile, AlbumHotMobile, Top100Mobile, MvMobile, TestMobile } from '~/modules/Home/components';
 import PlayListSection from '~/shared/components/PlayListSection';
 
 import img1R from '../../../src/assets/images/home/listRecent/img1.jpg';
@@ -101,10 +101,7 @@ const Home = () => {
                 <Collapsed />
             </ElWrapper>
             <div className="main-mobile">
-                <NewSongMobile />
-                <AlbumHotMobile />
-                <Top100Mobile />
-                <MvMobile />
+                <TestMobile />
             </div>
         </>
     )

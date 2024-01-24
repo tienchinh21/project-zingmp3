@@ -8,14 +8,14 @@ const MenuItem = () => {
             <div className="main-menu">
                 <ul className="list-item">
                     <li className="item isActive">
-                        <a href="">
+                        <a href="/">
                             {/* <SvgIcon icon="Discover" width={24} height={24} /> */}
                             <Discover />
                             <span>Khám Phá</span>
                         </a>
                     </li>
                     <li className="item">
-                        <a href="">
+                        <a href="/zing-chart">
                             <ZingChart />
                             <span>#zingchart</span>
                         </a>

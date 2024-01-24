@@ -23,7 +23,7 @@ const SongItem = ({ item, style, className }) => {
             <div className="playlist-wrapper">
                 <div className="card">
                     <div>
-                        <a className='link-item' href="" onClick={handleClick}>
+                        <a className='link-item' href="/album" onClick={handleClick}>
                             <div className="card-image">
                                 <img src={item.image} />
                                 <div className='opacity'></div>

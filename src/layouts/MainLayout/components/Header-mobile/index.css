@@ -5,6 +5,7 @@
     width: 100%;
     z-index: 99;
     max-width: 768px;
+    position: relative;
 }
 
 @media only screen and (min-width: 768px) {
@@ -17,13 +18,14 @@
     background-color: #fcfcfc;
     position: relative;
     transition: transform .3s;
+
 }
 
 .header-mb .top-bar-container .top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: 60px;
 }
 
 h1 {
@@ -104,4 +106,12 @@ h1 {
 .header-mb .top-bar-container .top-bar .user-profile .icon-search-mb {
     color: #32323d;
     font-size: 22px;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
 }
